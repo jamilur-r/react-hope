@@ -1,7 +1,13 @@
 {
   "name": "react-hope",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "description": "A react ui library built with styled components",
+  "author": {
+    "name": "Md. Jamilur Rahman",
+    "email": "abir2jamilur30@gmail.com",
+    "url": "https://jamilurrahman.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -14,9 +20,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "react-build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "parcel build ./src/components/index.js --out-dir dist  && npm pack && npm publish"
+    
   },
   "eslintConfig": {
     "extends": [
