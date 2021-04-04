@@ -1,10 +1,10 @@
 import React from 'react'
-
-import { ExampleComponent } from 'react-hope'
-import 'react-hope/dist/index.css'
+import {Container} from 'react-hope'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Container bgColor="#e7e7e7">
+    HElo
+  </Container>
 }
 
 export default App

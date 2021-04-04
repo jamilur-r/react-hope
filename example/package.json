@@ -7,19 +7,37 @@
     "start": "node ../node_modules/react-scripts/bin/react-scripts.js start",
     "build": "node ../node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
-    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
+    "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
+    "story": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
-    "react-scripts": "link:../node_modules/react-scripts",
-    "react-hope": "link:.."
+    "react-hope": "link:..",
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@storybook/addon-actions": "^6.2.2",
+    "@storybook/addon-essentials": "^6.2.2",
+    "@storybook/addon-links": "^6.2.2",
+    "@storybook/node-logger": "^6.2.2",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.2"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   },
   "browserslist": [
     ">0.2%",
